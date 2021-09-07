@@ -35,7 +35,7 @@
         @include animation(background-color);
     }
 
-    &__item:hover, &__item:focus {
+    &__item--accent {
         background-color: var(--accent-color);
     }
 
@@ -60,7 +60,7 @@
         margin: 0 auto 20px;
     }
 
-    &__item:hover &__icon {
+    &__item--accent &__icon {
         fill: var(--white);
     }
 
@@ -73,8 +73,7 @@
         @include animation(color);
     }
 
-    &__item:hover &__subtitle,
-    &__item:focus &__subtitle {
+    &__item--accent &__subtitle {
         color: var(--white)
     }
 
@@ -104,8 +103,7 @@
         }
     }
 
-    &__item:hover &__description,
-    &__item:focus &__description {
+    &__item--accent &__description {
         color: var(--white);
     }
 
@@ -120,8 +118,7 @@
         @include animation(background-color);
     }
 
-    &__item:hover &__description::before,
-    &__item:focus &__description::before {
+    &__item--accent &__description::before {
         background-color: var(--white);
     }
 

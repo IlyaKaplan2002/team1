@@ -41,12 +41,6 @@
     margin-bottom: 36px;
   }
 
-  // &__subtitle {
-  //   @include font(700, 14px, 164.9%, 0.08em);
-  //   color: var(--accent-color);
-  //   margin-bottom: 10px;
-  // }
-
   @media screen and (min-width: 1366px) {
     &__item::before {
       font-size: 20px;

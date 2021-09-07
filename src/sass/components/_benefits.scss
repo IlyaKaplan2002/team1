@@ -18,20 +18,31 @@
     background-color: var(--white);
     @extend %problems-shadow;
     padding: 20px 14px 20px 30px;
+
+    counter-reset: section;
+    list-style-type: none;
+  }
+
+  &__item::before {
+    counter-increment: section;
+    content: "— 0" counter(section);
+
+    display: block;
+    @include font(700, 14px, 164.9%, 0.08em);
+    color: var(--accent-color);
+    margin-bottom: 10px;
+
+    @media screen and (min-width:1366px) {
+      font-size: 20px;
+    }
   }
 
   &__item:not(:last-child) {
     margin-bottom: 36px;
   }
 
-  &__subtitle {
-    @include font(700, 14px, 164.9%, 0.08em);
-    color: var(--accent-color);
-    margin-bottom: 10px;
-  }
-
   @media screen and (min-width: 1366px) {
-    &__subtitle {
+    &__item::before {
       font-size: 20px;
     }
   }
@@ -80,7 +91,7 @@
       margin-bottom: 0;
     }
 
-    &__subtitle {
+    &__item::before {
       margin-bottom: 18px;
     }
   }

@@ -76,4 +76,14 @@
             display: none;
         }
     }
+
+    &__menu-icon {
+        stroke: var(--white);
+        @include animation(stroke);
+
+        &:hover,
+        &:focus {
+            stroke: var(--accent-color);
+        }
+    }
 }

@@ -14,8 +14,7 @@
         background-repeat: no-repeat;
         background-size: contain;
 
-        &:hover,
-        &:focus {
+        &:hover {
             background-image: url("../images/background-icons/ps_hand-pointer-top.svg");
         }
     }

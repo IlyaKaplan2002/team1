@@ -90,3 +90,13 @@
         }
     }
 }
+
+.mobile-menu-button__icon {
+    stroke: #000000;
+    @include animation(stroke);
+
+    &:hover,
+    &:focus {
+        stroke: var(--accent-color);
+    }
+}

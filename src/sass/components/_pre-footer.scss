@@ -57,6 +57,13 @@
 
     color: var(--main-color);
 
+    @include animation (color);
+
+    &:hover,
+    &:focus {
+      color: var(--main-text-with-opasity);
+    }
+
     @media screen and (max-width: 767px) {
       margin-top: 21.88px;
     }

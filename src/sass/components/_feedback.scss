@@ -21,10 +21,6 @@
     }
   }
 
-  &-slider {
-    position: relative;
-  }
-
   &__article {
     margin-bottom: 62px;
 
@@ -153,14 +149,14 @@
     &--left {
       &:hover,
       &:focus {
-        transform: scaleX(1.5) translateX(25px);
+        transform: scaleX(1.5) translateX(-25%);
       }
     }
 
     &--right {
       &:hover,
       &:focus {
-        transform: scaleX(1.5) translateX(-25px);
+        transform: scaleX(1.5) translateX(25%);
       }
     }
 
@@ -173,12 +169,22 @@
 
       &--left {
         left: 0;
-        transform: translateX(50px);
+        transform: translateX(-50%);
       }
 
       &--right {
         right: 0;
-        transform: translateX(-50px);
+        transform: translateX(50%);
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      &--left {
+        left: -58px;
+      }
+
+      &--right {
+        right: -58px;
       }
     }
   }
@@ -233,5 +239,52 @@
     @media screen and (min-width: 768px) {
       display: block;
     }
+  }
+}
+
+// --------------------Slider-------------------
+
+.slider {
+  position: relative;
+
+  /* Стрелка */
+  .slick-arrow{
+    font-size: 0;
+    background-size: contain;
+    // display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 997;
+    // transform: translateY(-50%);
+    width: 25px;
+    height: 16px;
+    cursor: pointer;
+    background-color: transparent;
+    @include animation(transform);
+  }
+
+  /* Стрелка влево */
+  .slick-arrow.slick-prev{
+    background-image: url("../images/background-icons/arrow-left.svg");
+    left: 123px;
+    transform: translateX(-50%);
+
+      &:hover,
+      &:focus {
+        transform: scaleX(1.5) translateX(-25%);
+      }
+  }
+
+  /* Стрелка вправо */
+  .slick-arrow.slick-next{
+    background-image: url("../images/background-icons/arrow-right.svg");
+    right: 123px;
+    transform: translateX(50%);
+
+      &:hover,
+      &:focus {
+        transform: scaleX(1.5) translateX(25%);
+      }
   }
 }

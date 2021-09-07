@@ -15,19 +15,20 @@
 // });
 
 $(document).ready(function () {
-  const prev = $('.feedback__article-button--left');
-  const next = $('.feedback__article-button--right');
+  // const prev = $('.feedback__article-button--left');
+  // const next = $('.feedback__article-button--right');
+  $('.feedback__main-slider').slick({
+    // nextArrow: next,
+    // prevArrow: prev,
+    // appendArrows: $('.feedback-slider'),
+    // arrows: false,
+    // dots: false,
+    // mobileFirst: true,
+    // slidesToShow: 1,
+    // slidesToScroll: 1,
+    // centerMode: true,
+    asNavFor: '.feedback__list',
 
-  $('.feedback-slider').slick({
-    nextArrow: next,
-    prevArrow: prev,
-    appendArrows: $('.feedback-slider'),
-    arrows: false,
-    dots: false,
-    mobileFirst: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true,
     responsive: [
       {
         breakpoint: 766,

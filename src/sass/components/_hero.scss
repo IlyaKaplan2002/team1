@@ -67,6 +67,7 @@
   &__button {
     margin: 52px auto 0;
     box-sizing: content-box;
+    border: 2px solid transparent;
   }
 
   @media screen and (min-width: 768px) {
